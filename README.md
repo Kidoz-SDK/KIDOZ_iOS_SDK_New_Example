@@ -72,7 +72,7 @@ The example application contains the following creative tools:
 `BOOL initislized = [[KidozSDK instance]isInterstitialInitialized];`  
 `BOOL ready = [[KidozSDK instance]isInterstitialReady];`
 
-** Note that you need to pause your apps workflow and/or audio track before opening the interstitial in  `interstitialDidOpen` callback and resume it in `interstitialDidClose`and `interstitialDidReciveError` callbacks.
+** Note: you must pause your application workflow and/or audio track before opening the rewarded in `interstitialDidOpen` callback and resume it in `interstitialDidClose` and `interstitialDidReciveError` callbacks.
 
 # KIDOZ Rewarded 
 `Rewarded`  is a full screen widget which is design for showing full screen advertisement .  
@@ -101,7 +101,7 @@ The example application contains the following creative tools:
 `BOOL initislized = [[KidozSDK instance]isRewardedInitialized];`  
 `BOOL ready = [[KidozSDK instance]isRewardedReady];`
 
-** Note that you need to pause your apps workflow and/or audio track before opening the rewarded in  `rewardedDidOpen` callback and resume it in `rewardedDidClose`and `rewardedDidReciveError` callbacks.
+** Note: you must pause your application workflow and/or audio track before opening the rewarded in `rewardedDidOpen` callback and resume it in `rewardedDidClose` and `rewardedDidReciveError` callbacks.
 # For any question or assistance, please contact us at SDK@kidoz.net.
 </br>
 License
