@@ -124,24 +124,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.60945638020833337" green="1" blue="0.076090494791666671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="edf-XP-6Op" secondAttribute="bottom" constant="20" id="2xK-VB-MQt"/>
+                            <constraint firstItem="6Nu-Vs-raz" firstAttribute="bottom" secondItem="edf-XP-6Op" secondAttribute="bottom" constant="20" id="2xK-VB-MQt"/>
                             <constraint firstItem="Swh-u3-44L" firstAttribute="top" secondItem="JMr-PJ-rfL" secondAttribute="bottom" constant="15" id="31c-iC-dgk"/>
-                            <constraint firstItem="WNS-Sz-liS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="53p-jR-M4M"/>
-                            <constraint firstItem="edf-XP-6Op" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9bb-ek-Ixu"/>
+                            <constraint firstItem="WNS-Sz-liS" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="53p-jR-M4M"/>
+                            <constraint firstItem="edf-XP-6Op" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="9bb-ek-Ixu"/>
                             <constraint firstItem="JEM-ez-Xfu" firstAttribute="top" secondItem="Swh-u3-44L" secondAttribute="bottom" constant="8" id="E2P-zF-Mn9"/>
                             <constraint firstItem="JMr-PJ-rfL" firstAttribute="top" secondItem="WNS-Sz-liS" secondAttribute="bottom" constant="8" id="GsL-wC-s2I"/>
                             <constraint firstItem="ZYq-Le-4UP" firstAttribute="top" secondItem="JEM-ez-Xfu" secondAttribute="bottom" constant="8" id="MCQ-8F-2fZ"/>
                             <constraint firstItem="aba-X8-IC8" firstAttribute="top" secondItem="ZYq-Le-4UP" secondAttribute="bottom" constant="8" id="S0b-jB-vjf"/>
-                            <constraint firstItem="edf-XP-6Op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="THV-Nz-7wB"/>
-                            <constraint firstItem="Swh-u3-44L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VPo-25-fNg"/>
-                            <constraint firstItem="ZYq-Le-4UP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YzN-Kx-87K"/>
-                            <constraint firstItem="WNS-Sz-liS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zgk-j8-kjn"/>
-                            <constraint firstItem="aba-X8-IC8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bV4-Oc-a9k"/>
-                            <constraint firstItem="JEM-ez-Xfu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eam-fp-ngU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMr-PJ-rfL" secondAttribute="trailing" id="iMu-z1-x0F"/>
-                            <constraint firstItem="JMr-PJ-rfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="od8-9D-bNq"/>
+                            <constraint firstItem="edf-XP-6Op" firstAttribute="leading" secondItem="6Nu-Vs-raz" secondAttribute="leading" constant="20" id="THV-Nz-7wB"/>
+                            <constraint firstItem="Swh-u3-44L" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="VPo-25-fNg"/>
+                            <constraint firstItem="ZYq-Le-4UP" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="YzN-Kx-87K"/>
+                            <constraint firstItem="WNS-Sz-liS" firstAttribute="top" secondItem="6Nu-Vs-raz" secondAttribute="top" id="Zgk-j8-kjn"/>
+                            <constraint firstItem="aba-X8-IC8" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="bV4-Oc-a9k"/>
+                            <constraint firstItem="JEM-ez-Xfu" firstAttribute="centerX" secondItem="6Nu-Vs-raz" secondAttribute="centerX" id="eam-fp-ngU"/>
+                            <constraint firstItem="6Nu-Vs-raz" firstAttribute="trailing" secondItem="JMr-PJ-rfL" secondAttribute="trailing" id="iMu-z1-x0F"/>
+                            <constraint firstItem="JMr-PJ-rfL" firstAttribute="leading" secondItem="6Nu-Vs-raz" secondAttribute="leading" id="od8-9D-bNq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="6Nu-Vs-raz"/>
                     </view>
                     <connections>
                         <outlet property="logText" destination="edf-XP-6Op" id="Py3-KV-0b4"/>

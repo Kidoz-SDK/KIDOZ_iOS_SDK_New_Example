@@ -10,12 +10,13 @@
 		11030FCA20318D7100035794 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11030FC920318D7100035794 /* AppDelegate.m */; };
 		11030FCD20318D7100035794 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11030FCC20318D7100035794 /* ViewController.m */; };
 		11030FD020318D7100035794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11030FCE20318D7100035794 /* Main.storyboard */; };
-		11030FD320318D7100035794 /* KidozSDKSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */; };
 		11030FD520318D7100035794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11030FD420318D7100035794 /* Assets.xcassets */; };
 		11030FD820318D7100035794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11030FD620318D7100035794 /* LaunchScreen.storyboard */; };
 		11030FDB20318D7100035794 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11030FDA20318D7100035794 /* main.m */; };
 		110310192032DFA900035794 /* kidoz_left_side_logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 110310182032DFA800035794 /* kidoz_left_side_logo_small.png */; };
-		1167AD412071162F00E626E2 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1167AD402071162F00E626E2 /* libKidozSDK.a */; };
+		1167AD5320B2AA1B00E626E2 /* KidozSDKSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */; };
+		116B87A820DA373F007420BF /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 116B87A720DA373F007420BF /* libKidozSDK.a */; };
+		11712A3020D8F8830020AA79 /* WarmTutorialExplainer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,8 @@
 		11030FDA20318D7100035794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		110310182032DFA800035794 /* kidoz_left_side_logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kidoz_left_side_logo_small.png; sourceTree = "<group>"; };
 		110E600B2045A26900A70705 /* KidozSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidozSDK.h; sourceTree = "<group>"; };
-		1167AD402071162F00E626E2 /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
+		116B87A720DA373F007420BF /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
+		11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WarmTutorialExplainer.mp3; sourceTree = "<group>"; };
 		118501972062AC0700507FB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		118501992062AC0F00507FB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -42,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1167AD412071162F00E626E2 /* libKidozSDK.a in Frameworks */,
+				116B87A820DA373F007420BF /* libKidozSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,7 @@
 				11030FD920318D7100035794 /* Info.plist */,
 				11030FDA20318D7100035794 /* main.m */,
 				11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */,
+				11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */,
 			);
 			path = KidozSDKSampleApp;
 			sourceTree = "<group>";
@@ -88,8 +91,8 @@
 		11030FFD20318D9F00035794 /* Kidoz */ = {
 			isa = PBXGroup;
 			children = (
+				116B87A720DA373F007420BF /* libKidozSDK.a */,
 				110E600B2045A26900A70705 /* KidozSDK.h */,
-				1167AD402071162F00E626E2 /* libKidozSDK.a */,
 			);
 			path = Kidoz;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				110310192032DFA900035794 /* kidoz_left_side_logo_small.png in Resources */,
+				11712A3020D8F8830020AA79 /* WarmTutorialExplainer.mp3 in Resources */,
 				11030FD820318D7100035794 /* LaunchScreen.storyboard in Resources */,
 				11030FD520318D7100035794 /* Assets.xcassets in Resources */,
 				11030FD020318D7100035794 /* Main.storyboard in Resources */,
@@ -180,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11030FD320318D7100035794 /* KidozSDKSampleApp.xcdatamodeld in Sources */,
+				1167AD5320B2AA1B00E626E2 /* KidozSDKSampleApp.xcdatamodeld in Sources */,
 				11030FCD20318D7100035794 /* ViewController.m in Sources */,
 				11030FDB20318D7100035794 /* main.m in Sources */,
 				11030FCA20318D7100035794 /* AppDelegate.m in Sources */,
@@ -257,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -306,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -322,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
 				INFOPLIST_FILE = KidozSDKSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
 				INFOPLIST_FILE = KidozSDKSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

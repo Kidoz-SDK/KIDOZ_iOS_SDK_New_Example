@@ -8,14 +8,17 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
+@interface ViewController ()
+@property (strong, nonatomic) AVAudioPlayer *player;
 @end
 
 
 @implementation ViewController
 @synthesize logText;
-
+@synthesize player;
 
 -(void)setBorder{
     
@@ -60,8 +63,12 @@
 
 
 - (IBAction)loadInterstitial:(id)sender {
-    [self logOut:@"Load Interstitial" withUITextView:logText withTimestamp:[self getTimestamp]];
-    [[KidozSDK instance]loadInterstitial];
+   
+    if([[KidozSDK instance]isInterstitialInitialized]){
+         [self logOut:@"Load Interstitial" withUITextView:logText withTimestamp:[self getTimestamp]];
+        [[KidozSDK instance]loadInterstitial];
+    }
+
     
 }
 
@@ -77,10 +84,16 @@
 }
 
 -(void)interstitialDidClose{
+    if(player!= nil)
+        [player setVolume:1.0];
+    
     [self logOut:@"Interstitial Closed" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
 
 -(void)interstitialDidOpen{
+    if(player!= nil)
+        [player setVolume:0.0];
+    
     [self logOut:@"Interstitial Opened" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
 
@@ -120,8 +133,13 @@
 
 
 - (IBAction)loadRewarded:(id)sender {
-    [self logOut:@"Load Rewarded" withUITextView:logText withTimestamp:[self getTimestamp]];
-    [[KidozSDK instance]loadRewarded];
+    
+    if([[KidozSDK instance]isRewardedInitialized]){
+        [self logOut:@"Load Rewarded" withUITextView:logText withTimestamp:[self getTimestamp]];
+
+        [[KidozSDK instance]loadRewarded];
+    }
+   // [[KidozSDK instance]loadRewarded];
 }
 
 - (IBAction)showRewarded:(id)sender {
@@ -134,10 +152,16 @@
 }
 
 -(void)rewardedDidClose{
+    if(player!= nil)
+        [player setVolume:1.0];
+    
     [self logOut:@"Rewarded Closed" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
 
 -(void)rewardedDidOpen{
+    if(player!= nil)
+        [player setVolume:0.0];
+    
     [self logOut:@"Rewarded Opened" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
 
@@ -195,6 +219,12 @@
     
     [self logOut:@"Initilalizing SDK..." withUITextView:logText withTimestamp:[self getTimestamp]];
     [[KidozSDK instance]initializeWithPublisherID:@"8" securityToken:@"QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os" withDelegate:self];
+    
+    NSString *soundFilePath = [NSString stringWithFormat:@"%@/WarmTutorialExplainer.mp3",[[NSBundle mainBundle] resourcePath]];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    player.numberOfLoops = -1;
+    [player play];
     
 }
 

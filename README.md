@@ -1,9 +1,9 @@
 
+**KIDOZ iOS SDK version 1.1.3**
+
 # KIDOZ iOS SDK Sample App
 
-**KIDOZ iOS SDK version 1.0.9**
-
-**KIDOZ SDK and the sample App are compatible with iOS 10.3 and above.**
+**KIDOZ SDK and the sample App are compatible with iOS 8.0 and above.**
 
 **KIDOZ SDK is written in Objective C.**
 
@@ -47,6 +47,7 @@ The example application contains the following creative tools:
     `BOOL initislized = [[KidozSDK instance]isSDKInitialized];`
 
 
+
 # KIDOZ Interstitial 
 `Intersitial`  is a full screen widget which is design for showing full screen advertisement .  
 1. In the selected view controller , conform to the  `KDZInterstitialDelegate`  protocol and implement all delegate methods:  
@@ -62,46 +63,45 @@ The example application contains the following creative tools:
 `-(void)interstitialDidResume {};`  
 `-(void)interstitialLoadFailed {};`  
 `-(void)interstitialDidReciveError:(NSString*)errorMessage {};`.  
-2. Init interstitial:  
+2. Init Interstitial:  
 `[[KidozSDK instance]initializeInterstitialWithDelegate:self];`  
-3. Load interstitial:  
+3. Load Interstitial:  
 `[[KidozSDK instance]loadInterstitial];`  
-4. Show interstitial:  
+4. Show Interstitial:  
 `[[KidozSDK instance]showInterstitial];`  
-5. To check interstitial state :  
+5. To check Interstitial state :  
 `BOOL initislized = [[KidozSDK instance]isInterstitialInitialized];`  
 `BOOL ready = [[KidozSDK instance]isInterstitialReady];`
 
-** Note: you must pause your application workflow and/or audio track before opening the rewarded in `interstitialDidOpen` callback and resume it in `interstitialDidClose` and `interstitialDidReciveError` callbacks.
+**Kidoz iOS Interstitial best practices**
+- The preferred timing to show Interstitial Ads : In the beginning of the game , Before the game ends, Before new game level, After completing a game level .   
+- Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-interstitialDidOpen:` and `-interstitialDidClose:` callbacks:
+```
+-(void)interstitialDidOpen {
+// mute/pause background sounds
+// pause your game 
+};
 
-# KIDOZ Rewarded 
-`Rewarded`  is a full screen widget which is design for showing full screen advertisement .  
-1. In the selected view controller , conform to the  `KDZRewardedDelegate`  protocol and implement all delegate methods:  
-`ViewController.h`  
-`@interface ViewController : UIViewController<KDZRewardedDelegate>`  
-`ViewController.m`  
-`-(void)rewardedDidInitialize {};`  
-`-(void)rewardedDidClose {};`  
-`-(void)rewardedDidOpen {};`  
-`-(void)rewardedIsReady {};`  
-`-(void)rewardedReturnedWithNoOffers {};`  
-`-(void)rewardedDidPause {};`  
-`-(void)rewardedDidResume {};`  
-`-(void)rewardedLoadFailed {};`  
-`-(void)rewardedDidReciveError:(NSString*)errorMessage {};`  
-`-(void)rewardReceived {};`  
-`-(void)rewardedStarted {};`  
-2. Init rewarded:  
-`[[KidozSDK instance]initializeRewardedWithDelegate:self];`  
-3. Load interstitial:  
-`[[KidozSDK instance]loadRewarded];`  
-4. Show interstitial:  
-`[[KidozSDK instance]showRewarded];`  
-5. To check interstitial state :  
-`BOOL initislized = [[KidozSDK instance]isRewardedInitialized];`  
-`BOOL ready = [[KidozSDK instance]isRewardedReady];`
+-(void)interstitialDidClose {
+// unmute/resume background sounds
+// resume your game 
+}
+```
 
-** Note: you must pause your application workflow and/or audio track before opening the rewarded in `rewardedDidOpen` callback and resume it in `rewardedDidClose` and `rewardedDidReciveError` callbacks.
+**Kidoz iOS Rewarded best practices**
+- The preferred timing to show Rewarded Ads : In the beginning of the game, Before the game ends, Before new game level, After completing a game level .   
+- Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-rewardedDidOpen:` and `-rewardedDidClose:` callbacks:
+```
+-(void)rewardedDidOpen {
+//mute/pause background sounds
+//pause your game 
+};
+
+-(void)rewardedDidClose {
+//unmute/resume background sounds
+//resume your game 
+};  
+```
 # For any question or assistance, please contact us at SDK@kidoz.net.
 </br>
 License
@@ -120,5 +120,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
