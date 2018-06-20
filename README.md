@@ -1,5 +1,6 @@
 
 
+
 **KIDOZ iOS SDK version 1.1.3**
 
 # KIDOZ iOS SDK Sample App
@@ -88,33 +89,31 @@ The example application contains the following creative tools:
 // resume your game 
 }
 ```
-# KIDOZ Rewarded
-
-`Rewarded` is a full screen widget which is designed for showing full screen advertisement.
-
-1. In the selected view controller, conform to the `KDZRewardedDelegate` protocol and implement all delegate methods:
-`ViewController.h`
-`@interface ViewController : UIViewController<KDZRewardedDelegate>`
-`ViewController.m`
-`-(void)rewardedDidInitialize {};`
-`-(void)rewardedDidClose {};`
-`-(void)rewardedDidOpen {};`
-`-(void)rewardedIsReady {};`
-`-(void)rewardedReturnedWithNoOffers {};`
-`-(void)rewardedDidPause {};`
-`-(void)rewardedDidResume {};`
-`-(void)rewardedLoadFailed {};`
-`-(void)rewardedDidReciveError:(NSString*)errorMessage {};`
-`-(void)rewardReceived {};`
-`-(void)rewardedStarted {};`
-2. Init rewarded:
-`[[KidozSDK instance]initializeRewardedWithDelegate:self];`
-3. Load interstitial:
-`[[KidozSDK instance]loadRewarded];`
-4. Show interstitial:
-`[[KidozSDK instance]showRewarded];`
-5. To check interstitial state :
-`BOOL initislized = [[KidozSDK instance]isRewardedInitialized];`
+# KIDOZ Rewarded 
+`Rewarded`  is a full screen widget which is designed for showing full screen advertisement.  
+1. In the selected view controller , conform to the  `KDZRewardedDelegate`  protocol and implement all delegate methods:  
+`ViewController.h`  
+`@interface ViewController : UIViewController<KDZRewardedDelegate>`  
+`ViewController.m`  
+`-(void)rewardedDidInitialize {};`  
+`-(void)rewardedDidClose {};`  
+`-(void)rewardedDidOpen {};`  
+`-(void)rewardedIsReady {};`  
+`-(void)rewardedReturnedWithNoOffers {};`  
+`-(void)rewardedDidPause {};`  
+`-(void)rewardedDidResume {};`  
+`-(void)rewardedLoadFailed {};`  
+`-(void)rewardedDidReciveError:(NSString*)errorMessage {};`  
+`-(void)rewardReceived {};`  
+`-(void)rewardedStarted {};`  
+2. Init rewarded:  
+`[[KidozSDK instance]initializeRewardedWithDelegate:self];`  
+3. Load interstitial:  
+`[[KidozSDK instance]loadRewarded];`  
+4. Show interstitial:  
+`[[KidozSDK instance]showRewarded];`  
+5. To check interstitial state :  
+`BOOL initislized = [[KidozSDK instance]isRewardedInitialized];`  
 `BOOL ready = [[KidozSDK instance]isRewardedReady];`
 
 **Kidoz iOS Rewarded best practices**
