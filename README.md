@@ -1,4 +1,5 @@
 
+
 **KIDOZ iOS SDK version 1.1.3**
 
 # KIDOZ iOS SDK Sample App
@@ -25,7 +26,7 @@ The example application contains the following creative tools:
 1.  Navigate to the downloaded KidozSDKSampleApp folder or open KidozSDKSampleApp in the Xcode and find the libKidozSDK.a and the KidozSDK.h files.
 2.  Drag and drop the libKidozSDK.a and the KidozSDK.h to your project.
 <a href="url"><img src="https://cdn3.kidoz.net/docs/ios/KidozSdkSampleApp1.png" align="center"  ></a>
-3. Select your target in the project navigator , select the “Build Settings” tab , search for “Other Linker Flags” , click on the “+” and type -ObjC  `Other Linker Flags -ObjC`  .
+3. Select your target in the project navigator, select the “Build Settings” tab, search for “Other Linker Flags”, click on the “+” and type -ObjC  `Other Linker Flags -ObjC`  .
 <a href="url"><img src="https://cdn3.kidoz.net/docs/ios/KidozSdkSampleApp3.png" align="center"  ></a>
 4. In the  `info.plist`  add  `NSAppTransportSecurity`  exception with  `NSAllowsArbitraryLoads`exception  
 `<key>NSAppTransportSecurity</key>`  
@@ -49,8 +50,8 @@ The example application contains the following creative tools:
 
 
 # KIDOZ Interstitial 
-`Intersitial`  is a full screen widget which is design for showing full screen advertisement .  
-1. In the selected view controller , conform to the  `KDZInterstitialDelegate`  protocol and implement all delegate methods:  
+`Intersitial`  is a full screen widget which is designed for showing full screen advertisement.  
+1. In the selected view controller, conform to the  `KDZInterstitialDelegate`  protocol and implement all delegate methods:  
 `ViewController.h`  
 `@interface ViewController : UIViewController<KDZInterstitialDelegate>`  
 `ViewController.m`  
@@ -74,33 +75,61 @@ The example application contains the following creative tools:
 `BOOL ready = [[KidozSDK instance]isInterstitialReady];`
 
 **Kidoz iOS Interstitial best practices**
-- The preferred timing to show Interstitial Ads : In the beginning of the game , Before the game ends, Before new game level, After completing a game level .   
+- The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
 - Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-interstitialDidOpen:` and `-interstitialDidClose:` callbacks:
 ```
 -(void)interstitialDidOpen {
 // mute/pause background sounds
 // pause your game 
-};
+}
 
 -(void)interstitialDidClose {
 // unmute/resume background sounds
 // resume your game 
 }
 ```
+# KIDOZ Rewarded
+
+`Rewarded` is a full screen widget which is designed for showing full screen advertisement.
+
+1. In the selected view controller, conform to the `KDZRewardedDelegate` protocol and implement all delegate methods:
+`ViewController.h`
+`@interface ViewController : UIViewController<KDZRewardedDelegate>`
+`ViewController.m`
+`-(void)rewardedDidInitialize {};`
+`-(void)rewardedDidClose {};`
+`-(void)rewardedDidOpen {};`
+`-(void)rewardedIsReady {};`
+`-(void)rewardedReturnedWithNoOffers {};`
+`-(void)rewardedDidPause {};`
+`-(void)rewardedDidResume {};`
+`-(void)rewardedLoadFailed {};`
+`-(void)rewardedDidReciveError:(NSString*)errorMessage {};`
+`-(void)rewardReceived {};`
+`-(void)rewardedStarted {};`
+2. Init rewarded:
+`[[KidozSDK instance]initializeRewardedWithDelegate:self];`
+3. Load interstitial:
+`[[KidozSDK instance]loadRewarded];`
+4. Show interstitial:
+`[[KidozSDK instance]showRewarded];`
+5. To check interstitial state :
+`BOOL initislized = [[KidozSDK instance]isRewardedInitialized];`
+`BOOL ready = [[KidozSDK instance]isRewardedReady];`
 
 **Kidoz iOS Rewarded best practices**
-- The preferred timing to show Rewarded Ads : In the beginning of the game, Before the game ends, Before new game level, After completing a game level .   
+- The preferred timing to show Rewarded Ads : Based on the implementation of rewarded logics in your game .   
 - Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-rewardedDidOpen:` and `-rewardedDidClose:` callbacks:
 ```
 -(void)rewardedDidOpen {
 //mute/pause background sounds
 //pause your game 
-};
+}
 
 -(void)rewardedDidClose {
 //unmute/resume background sounds
 //resume your game 
-};  
+}
 ```
 # For any question or assistance, please contact us at SDK@kidoz.net.
 </br>
