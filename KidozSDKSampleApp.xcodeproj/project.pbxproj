@@ -15,8 +15,8 @@
 		11030FDB20318D7100035794 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11030FDA20318D7100035794 /* main.m */; };
 		110310192032DFA900035794 /* kidoz_left_side_logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 110310182032DFA800035794 /* kidoz_left_side_logo_small.png */; };
 		1167AD5320B2AA1B00E626E2 /* KidozSDKSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */; };
-		116B87A820DA373F007420BF /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 116B87A720DA373F007420BF /* libKidozSDK.a */; };
 		11712A3020D8F8830020AA79 /* WarmTutorialExplainer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */; };
+		11F3FDC52137FE2D00D47D46 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F3FDC42137FE2D00D47D46 /* libKidozSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +33,10 @@
 		11030FDA20318D7100035794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		110310182032DFA800035794 /* kidoz_left_side_logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kidoz_left_side_logo_small.png; sourceTree = "<group>"; };
 		110E600B2045A26900A70705 /* KidozSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidozSDK.h; sourceTree = "<group>"; };
-		116B87A720DA373F007420BF /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
 		11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WarmTutorialExplainer.mp3; sourceTree = "<group>"; };
 		118501972062AC0700507FB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		118501992062AC0F00507FB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		11F3FDC42137FE2D00D47D46 /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116B87A820DA373F007420BF /* libKidozSDK.a in Frameworks */,
+				11F3FDC52137FE2D00D47D46 /* libKidozSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 		11030FFD20318D9F00035794 /* Kidoz */ = {
 			isa = PBXGroup;
 			children = (
-				116B87A720DA373F007420BF /* libKidozSDK.a */,
+				11F3FDC42137FE2D00D47D46 /* libKidozSDK.a */,
 				110E600B2045A26900A70705 /* KidozSDK.h */,
 			);
 			path = Kidoz;
