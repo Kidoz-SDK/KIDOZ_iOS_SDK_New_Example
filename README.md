@@ -4,7 +4,7 @@
 
 **KIDOZ iOS SDK version 1.2.5**
 
-# KIDOZ iOS SDK Sample App
+# KIDOZ iOS SDK Sample App 
 
 **KIDOZ SDK and the sample App are compatible with iOS 8.0 and above.**
 
