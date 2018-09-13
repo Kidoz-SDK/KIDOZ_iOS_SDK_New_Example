@@ -253,7 +253,7 @@ if([[KidozSDK instance]isInterstitialReady])
 // unmute/resume background sounds
 // resume your game 
 }
-``` 
+```
 # KIDOZ Rewarded 
 `Rewarded`  is a full screen widget which is designed for showing full screen advertisement.  
 1. In the selected view controller , conform to the  `KDZRewardedDelegate`  protocol and implement all delegate methods:  
