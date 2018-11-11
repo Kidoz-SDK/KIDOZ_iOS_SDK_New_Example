@@ -1,5 +1,6 @@
 
-**KIDOZ iOS SDK version 1.2.5**
+
+**KIDOZ iOS SDK version 1.3.0**
 
 # KIDOZ iOS SDK Sample App
 
@@ -14,7 +15,7 @@ This iOS application project provides an example of the KIDOZ SDK integration.
 The example application contains the following creative tools:
 * KIDOZ Interstitial view  
 * KIDOZ Rewarded view
-
+* KIDOZ Banner view
 # Running the sample app
 1.  Download / Clone the KidozSDKSampleApp
 2.  Launch  `Xcode`, click  `File`  –>  `Open`, navigate to downloaded project, select the Xcode project file and press  `OK`.
@@ -24,16 +25,16 @@ The example application contains the following creative tools:
 
 1.  Navigate to the downloaded KidozSDKSampleApp folder or open KidozSDKSampleApp in the Xcode and find the libKidozSDK.a and the KidozSDK.h files.
 2.  Drag and drop the libKidozSDK.a and the KidozSDK.h to your project.
-<a href="url"><img src="https://cdn3.kidoz.net/docs/ios/KidozSdkSampleApp1.png" align="center"  ></a>
+<a href="url"><img src="https://cdn.kidoz.net/sdk/ios/KidozSdkSampleApp1.png" align="center"  ></a>
 3. Select your target in the project navigator, select the “Build Settings” tab, search for “Other Linker Flags”, click on the “+” and type -ObjC  `Other Linker Flags -ObjC`  .
-<a href="url"><img src="https://cdn3.kidoz.net/docs/ios/KidozSdkSampleApp3.png" align="center"  ></a>
+<a href="url"><img src="https://cdn.kidoz.net/sdk/ios/KidozSdkSampleApp3.png" align="center"  ></a>
 4. In the  `info.plist`  add  `NSAppTransportSecurity`  exception with  `NSAllowsArbitraryLoads`exception  
 `<key>NSAppTransportSecurity</key>`  
 `<dict>`  
 `<key>NSAllowsArbitraryLoads</key>`  
 `<true/>`  
 `</dict>`
-<a href="url"><img src="https://cdn3.kidoz.net/docs/ios/KidozSdkSampleApp2.png" align="center"  ></a>
+<a href="url"><img src="https://cdn.kidoz.net/sdk/ios/KidozSdkSampleApp2.png" align="center"  ></a>
 5. Add the #import <UIKit/UIKit.h> and #import ”KidozSDK.h” to ViewController or appDelegate.
 6. Conform to the  `KDZInitDelegate`  protocol and implement SDK delegate methods:  
     `ViewController.h`  
@@ -64,6 +65,7 @@ ViewController.m
 -(void)interstitialDidResume {};  
 -(void)interstitialLoadFailed {};  
 -(void)interstitialDidReciveError:(NSString*)errorMessage {};
+-(void)interstitialLeftApplication{};
 ```
 
 * To check Interstitial state :  
@@ -120,6 +122,7 @@ ViewController.m
 -(void)rewardedDidReciveError:(NSString*)errorMessage {};  
 -(void)rewardReceived {}; 
 -(void)rewardedStarted {};
+-(void)rewardedLeftApplication{};
 ```
 * To check rewarded state :  
 ```
@@ -140,7 +143,6 @@ if([[KidozSDK instance]isRewardedInitialized])
 ```
 if([[KidozSDK instance]isRewardedReady])
    [[KidozSDK instance]showRewarded];
-
 ```  
 
 **Kidoz iOS Rewarded best practices**
@@ -157,6 +159,99 @@ if([[KidozSDK instance]isRewardedReady])
 //resume your game 
 }
 ```
+# KIDOZ Banner
+
+1. In the selected view controller , conform to the  `KDZBannerDelegate`  protocol and implement all delegate methods:  
+
+```
+ViewController.h  
+@interface ViewController : UIViewController<KDZBannerDelegate> 
+ViewController.m
+-(void)bannerDidInitialize{};
+-(void)bannerDidClose{};
+-(void)bannerDidOpen{};
+-(void)bannerIsReady{};
+-(void)bannerReturnedWithNoOffers;
+-(void)bannerLoadFailed{};
+-(void)bannerDidReciveError:(NSString*)errorMessage{};
+-(void)bannerLeftApplication{};
+```
+
+* To check banner state :  
+```
+BOOL initislized = [[KidozSDK instance]isBannerInitialized];
+BOOL ready = [[KidozSDK instance]isBannerReady];
+```
+
+2. Init banner:  
+The banner can be placed on one of six sides of the  screen with BANNER_POSITION - `TOP_CENTER`, `BOTTOM_CENTER` ,`TOP_LEFT` ,`TOP_RIGHT` ,`BOTTOM_LEFT` ,`BOTTOM_RIGHT`.
+
+and initialized with: initializeBannerWithDelegate:(id<KDZBannerDelegate>)delegate withViewController:(UIViewController *)viewController
+```
+if([[KidozSDK instance]isSDKInitialized]){
+   [[KidozSDK instance]initializeBannerWithDelegate:self withViewController:self];
+   [[KidozSDK instance]setBannerPosition:BOTTOM_CENTER]
+}
+```
+Or The Banner can be initialized with custom UIView and positioned more flexibly with constraints with this method:  (void)initializeBannerWithDelegate:(id<KDZBannerDelegate>)delegate withView:(UIView*)view:
+
+``` 
+CGFloat BANNER_WIDTH = 320;
+CGFloat BANNER_HEIGHT = 50;
+
+mBanner = [[UIView alloc] initWithFrame:CGRectMake(0,0,BANNER_WIDTH,BANNER_HEIGHT)];
+[self.view addSubview:mBanner];
+mBanner.translatesAutoresizingMaskIntoConstraints = NO;
+[self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:mBanner
+              attribute:NSLayoutAttributeBottom
+              relatedBy:NSLayoutRelationEqual
+              toItem:self.bottomLayoutGuide
+              attribute:NSLayoutAttributeTop
+              multiplier:1
+              constant:0],        
+[NSLayoutConstraint constraintWithItem:mBanner
+              attribute:NSLayoutAttributeCenterX
+              relatedBy:NSLayoutRelationEqual
+              toItem:self.view
+              attribute:NSLayoutAttributeCenterX
+              multiplier:1
+              constant:0],
+[NSLayoutConstraint  constraintWithItem:mBanner
+              attribute:NSLayoutAttributeHeight
+              relatedBy:NSLayoutRelationEqual
+              toItem:nil
+              attribute:NSLayoutAttributeNotAnAttribute
+              multiplier:0
+              constant:BANNER_HEIGHT],
+[NSLayoutConstraint  constraintWithItem:mBanner
+              attribute:NSLayoutAttributeWidth
+              relatedBy:NSLayoutRelationEqual
+              toItem:nil
+              attribute:NSLayoutAttributeNotAnAttribute
+              multiplier:0
+              constant:BANNER_WIDTH]]];
+
+[self.view bringSubviewToFront:mBanner];
+
+[[KidozSDK instance]initializeBannerWithDelegate:self withView:mBanner];
+
+}
+``` 
+3. Load banner :  
+```
+if([[KidozSDK instance]isBannerInitialized])
+   [[KidozSDK instance]loadBanner];
+```
+4. Show banner:  
+```
+if([[KidozSDK instance]isBannerReady])
+   [[KidozSDK instance]showBanner];
+```  
+
+5. Hide banner:  
+```
+   [[KidozSDK instance]hideBanner];
+```  
 # For any question or assistance, please contact us at SDK@kidoz.net.
 </br>
 License

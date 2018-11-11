@@ -52,14 +52,77 @@
     [self logOut:@"Rewarded initializing..." withUITextView:logText withTimestamp:[self getTimestamp]];
     [[KidozSDK instance] initializeRewardedWithDelegate:self];
     
+    [self logOut:@"Banner initializing..." withUITextView:logText withTimestamp:[self getTimestamp]];
+    [[KidozSDK instance]initializeBannerWithDelegate:self withViewController:self];
+    [[KidozSDK instance]setBannerPosition:BOTTOM_CENTER];
+
+    
 }
 
 -(void)onInitError:(NSString *)error{
     [self logOut:@"SDK Init Error" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
 
+/*     Banner     */
+
+- (IBAction)loadBanner:(id)sender {
+    if([[KidozSDK instance]isBannerInitialized]){
+        [self logOut:@"Load Banner" withUITextView:logText withTimestamp:[self getTimestamp]];
+        [[KidozSDK instance]loadBanner];
+    }
+}
+
+
+- (IBAction)showBanner:(id)sender {
+    [self logOut:@"Show Banner" withUITextView:logText withTimestamp:[self getTimestamp]];
+    [[KidozSDK instance]showBanner];
+    
+}
+
+- (IBAction)hideBanner:(id)sender {
+     [[KidozSDK instance]hideBanner];
+}
+
+- (void)bannerDidClose {
+    [self logOut:@"Banner Did Close" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerDidInitialize {
+    [self logOut:@"Banner Did Initialize" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerDidOpen {
+    [self logOut:@"Banner Did Open" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerDidReciveError:(NSString *)errorMessage {
+    [self logOut:errorMessage withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerIsReady {
+    [self logOut:@"Banner Is Ready" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerLeftApplication {
+    [self logOut:@"banner Left Application" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerLoadFailed {
+    [self logOut:@"Banner Load Failed" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+- (void)bannerReturnedWithNoOffers {
+    [self logOut:@"Banner Returned With No Offers" withUITextView:logText withTimestamp:[self getTimestamp]];
+}
+
+
+
+
+/*      --------       */
+
 
 /*     Interstitial     */
+
 
 
 - (IBAction)loadInterstitial:(id)sender {
@@ -69,7 +132,6 @@
         [[KidozSDK instance]loadInterstitial];
     }
 
-    
 }
 
 - (IBAction)showInterstitial:(id)sender {
@@ -122,8 +184,15 @@
 }
 
 - (void)interstitialLoadFailed {
-    
+    [self logOut:@"interstitial Load Failed" withUITextView:logText withTimestamp:[self getTimestamp]];
+
 }
+
+- (void)interstitialLeftApplication {
+    [self logOut:@"interstitial Left Application" withUITextView:logText withTimestamp:[self getTimestamp]];
+
+}
+
 
 
 /*      --------       */
@@ -136,10 +205,10 @@
     
     if([[KidozSDK instance]isRewardedInitialized]){
         [self logOut:@"Load Rewarded" withUITextView:logText withTimestamp:[self getTimestamp]];
-
+        
         [[KidozSDK instance]loadRewarded];
     }
-   // [[KidozSDK instance]loadRewarded];
+    // [[KidozSDK instance]loadRewarded];
 }
 
 - (IBAction)showRewarded:(id)sender {
@@ -195,14 +264,20 @@
 }
 
 - (void)rewardedLoadFailed {
-    
+    [self logOut:@"Rrewarded Load Failed" withUITextView:logText withTimestamp:[self getTimestamp]];
+
 }
+
+- (void)rewardedLeftApplication {
+    [self logOut:@"rewarded Left Application" withUITextView:logText withTimestamp:[self getTimestamp]];
+
+}
+
 
 
 /*      --------       */
 
--(NSString*)getTimestamp{
-    
+-(NSString*)getTimestamp{    
     NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
     [objDateformat setDateFormat:@"HHmmssSSS"];
     //[objDateformat setDateFormat:@"yyyyMMdd'T'HHmmss.SSS"];
@@ -212,6 +287,21 @@
 }
 
 
+/*
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+*/
+
+ -(BOOL)prefersStatusBarHidden{
+ return YES;
+ }
+ 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -232,8 +322,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 
 
 

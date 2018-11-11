@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "KidozSDK.h"
 
-@interface ViewController : UIViewController<KDZInitDelegate,KDZInterstitialDelegate,KDZRewardedDelegate>
+@interface ViewController : UIViewController<KDZInitDelegate,KDZInterstitialDelegate,KDZRewardedDelegate,KDZBannerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *logText;
 

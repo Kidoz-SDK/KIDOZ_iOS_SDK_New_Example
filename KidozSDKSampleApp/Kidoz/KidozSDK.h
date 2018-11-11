@@ -20,6 +20,7 @@
 -(void)interstitialDidResume;
 -(void)interstitialLoadFailed;
 -(void)interstitialDidReciveError:(NSString*)errorMessage;
+-(void)interstitialLeftApplication;
 @end
 
 @protocol KDZRewardedDelegate <NSObject>
@@ -34,15 +35,32 @@
 -(void)rewardedDidReciveError:(NSString*)errorMessage;
 -(void)rewardReceived;
 -(void)rewardedStarted;
+-(void)rewardedLeftApplication;
 @end
 
-@protocol KDZInitDelegate <NSObject>
 
+@protocol KDZInitDelegate <NSObject>
 @optional
 -(void)onInitSuccess;
 -(void)onInitError:(NSString *)error;
-
 @end
+
+
+@protocol KDZBannerDelegate <NSObject>
+-(void)bannerDidInitialize;
+-(void)bannerDidClose;
+-(void)bannerDidOpen;
+-(void)bannerIsReady;
+-(void)bannerReturnedWithNoOffers;
+-(void)bannerLoadFailed;
+-(void)bannerDidReciveError:(NSString*)errorMessage;
+-(void)bannerLeftApplication;
+@end
+
+
+typedef enum {
+  BOTTOM_CENTER,TOP_LEFT,TOP_CENTER,TOP_RIGHT,BOTTOM_LEFT,BOTTOM_RIGHT,NONE
+}BANNER_POSITION;
 
 @interface KidozSDK : NSObject
 
@@ -70,6 +88,20 @@
 - (BOOL)isRewardedReady;
 
 - (BOOL)isSDKInitialized;
+
+- (void)initializeBannerWithDelegate:(id<KDZBannerDelegate>)delegate withViewController:(UIViewController *)viewController;
+- (void)initializeBannerWithDelegate:(id<KDZBannerDelegate>)delegate withView:(UIView*)view;
+
+- (void)loadBanner;
+- (void)showBanner;
+- (void)hideBanner;
+- (void)setBannerPosition:(BANNER_POSITION)bannerPosition;
+
+- (BOOL)isBannerInitialized;
+- (BOOL)isBannerReady;
+- (void)setInterstitialDelegate:(id<KDZInterstitialDelegate>)delegate;
+- (void)setRewardedDelegate:(id<KDZRewardedDelegate>)delegate;
+- (void)setBannerDelegate:(id<KDZBannerDelegate>)delegate;
 
 
 
