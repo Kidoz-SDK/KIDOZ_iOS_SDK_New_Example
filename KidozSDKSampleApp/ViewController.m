@@ -21,11 +21,9 @@
 @synthesize player;
 
 -(void)setBorder{
-    
     [[self.logText layer] setBorderColor:[[UIColor orangeColor] CGColor]];
     [[self.logText layer] setBorderWidth:2.3];
     [[self.logText layer] setCornerRadius:15];
-    
 }
 
 -(void)logOut:(NSString*)message withUITextView:(UITextView*)textView withTimestamp:(NSString*)timestamp{
