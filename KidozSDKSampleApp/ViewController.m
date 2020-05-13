@@ -44,6 +44,8 @@
 -(void)onInitSuccess{
     [self logOut:@"SDK Initialized" withUITextView:logText withTimestamp:[self getTimestamp]];
 
+
+                            
     [self logOut:@"Interstitial initializing..." withUITextView:logText withTimestamp:[self getTimestamp]];
     [[KidozSDK instance] initializeInterstitialWithDelegate:self];
     
@@ -54,7 +56,6 @@
     [[KidozSDK instance]initializeBannerWithDelegate:self withViewController:self];
     [[KidozSDK instance]setBannerPosition:BOTTOM_CENTER];
 
-    
 }
 
 -(void)onInitError:(NSString *)error{
@@ -112,8 +113,6 @@
 - (void)bannerReturnedWithNoOffers {
     [self logOut:@"Banner Returned With No Offers" withUITextView:logText withTimestamp:[self getTimestamp]];
 }
-
-
 
 
 /*      --------       */
@@ -191,22 +190,14 @@
 
 }
 
-
-
 /*      --------       */
 
 /*      Rewarded       */
-
-
-
 - (IBAction)loadRewarded:(id)sender {
-    
     if([[KidozSDK instance]isRewardedInitialized]){
         [self logOut:@"Load Rewarded" withUITextView:logText withTimestamp:[self getTimestamp]];
-        
         [[KidozSDK instance]loadRewarded];
     }
-    // [[KidozSDK instance]loadRewarded];
 }
 
 - (IBAction)showRewarded:(id)sender {
@@ -306,6 +297,11 @@
     [self setBorder];
     
     [self logOut:@"Initilalizing SDK..." withUITextView:logText withTimestamp:[self getTimestamp]];
+    
+    NSString *SDKVersion = [NSString stringWithFormat:@"%@ %@" , @"SDK Vesion", [[KidozSDK instance]getSdkVersion]];
+    [self logOut:SDKVersion withUITextView:logText withTimestamp:[self getTimestamp]];
+    
+
     [[KidozSDK instance]initializeWithPublisherID:@"8" securityToken:@"QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os" withDelegate:self];
     
     NSString *soundFilePath = [NSString stringWithFormat:@"%@/WarmTutorialExplainer.mp3",[[NSBundle mainBundle] resourcePath]];

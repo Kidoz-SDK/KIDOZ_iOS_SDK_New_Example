@@ -1,7 +1,8 @@
 
 
 
-**KIDOZ iOS SDK version 1.3.2**
+
+**KIDOZ iOS SDK version 1.3.5**
 
 # KIDOZ iOS SDK Sample App
 
@@ -9,7 +10,7 @@
 
 **KIDOZ SDK is written in Objective C.**
 
-
+***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Family category.***
 
 This iOS application project provides an example of the KIDOZ SDK integration.
 

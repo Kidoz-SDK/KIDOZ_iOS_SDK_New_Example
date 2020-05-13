@@ -102,8 +102,7 @@ typedef enum {
 - (void)setInterstitialDelegate:(id<KDZInterstitialDelegate>)delegate;
 - (void)setRewardedDelegate:(id<KDZRewardedDelegate>)delegate;
 - (void)setBannerDelegate:(id<KDZBannerDelegate>)delegate;
-
-
+- (NSString*)getSdkVersion;
 
 @end
 
