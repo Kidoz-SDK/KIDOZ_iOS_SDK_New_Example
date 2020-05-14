@@ -10,7 +10,7 @@
 
 **KIDOZ SDK is written in Objective C.**
 
-***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Family category.***
+***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
 This iOS application project provides an example of the KIDOZ SDK integration.
 
