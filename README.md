@@ -2,7 +2,7 @@
 
 
 
-**KIDOZ iOS SDK version 1.3.6**
+**KIDOZ iOS SDK version 8.9.0**
 
 # KIDOZ iOS SDK Sample App
 

@@ -14,9 +14,6 @@
 		11030FD820318D7100035794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11030FD620318D7100035794 /* LaunchScreen.storyboard */; };
 		11030FDB20318D7100035794 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11030FDA20318D7100035794 /* main.m */; };
 		110310192032DFA900035794 /* kidoz_left_side_logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 110310182032DFA800035794 /* kidoz_left_side_logo_small.png */; };
-		1128CE3825540287004D5459 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1128CE3725540287004D5459 /* libKidozSDK.a */; };
-		1128CE3925540287004D5459 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1128CE3725540287004D5459 /* libKidozSDK.a */; };
-		1128CE3A25540287004D5459 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1128CE3725540287004D5459 /* libKidozSDK.a */; };
 		1167AD5320B2AA1B00E626E2 /* KidozSDKSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */; };
 		11712A3020D8F8830020AA79 /* WarmTutorialExplainer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */; };
 		119FB1232365F8FC005084B8 /* KidozSDKSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11030FD120318D7100035794 /* KidozSDKSampleApp.xcdatamodeld */; };
@@ -37,6 +34,7 @@
 		119FB13E2365F944005084B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11030FD620318D7100035794 /* LaunchScreen.storyboard */; };
 		119FB13F2365F944005084B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11030FD420318D7100035794 /* Assets.xcassets */; };
 		119FB1402365F944005084B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11030FCE20318D7100035794 /* Main.storyboard */; };
+		11C58478259297790005EDA8 /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C58477259297790005EDA8 /* libKidozSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,13 +50,13 @@
 		11030FD920318D7100035794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11030FDA20318D7100035794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		110310182032DFA800035794 /* kidoz_left_side_logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kidoz_left_side_logo_small.png; sourceTree = "<group>"; };
-		1128CE3725540287004D5459 /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
 		11712A2F20D8F8830020AA79 /* WarmTutorialExplainer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WarmTutorialExplainer.mp3; sourceTree = "<group>"; };
 		118501972062AC0700507FB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		118501992062AC0F00507FB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		119FB1322365F8FC005084B8 /* KidozSDKSampleApp yvr1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KidozSDKSampleApp yvr1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		119FB1442365F944005084B8 /* KidozSDKSampleApp yvr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KidozSDKSampleApp yvr2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B73DFD2545ED0900D8BB97 /* KidozSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KidozSDK.h; path = ../../../../Kidoz_iOS_SDK_Workspace/KidozSDK/KidozSDK/KidozSDK.h; sourceTree = "<group>"; };
+		11C58477259297790005EDA8 /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1128CE3825540287004D5459 /* libKidozSDK.a in Frameworks */,
+				11C58478259297790005EDA8 /* libKidozSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1128CE3925540287004D5459 /* libKidozSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1128CE3A25540287004D5459 /* libKidozSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +127,7 @@
 		11030FFD20318D9F00035794 /* Kidoz */ = {
 			isa = PBXGroup;
 			children = (
-				1128CE3725540287004D5459 /* libKidozSDK.a */,
+				11C58477259297790005EDA8 /* libKidozSDK.a */,
 				11B73DFD2545ED0900D8BB97 /* KidozSDK.h */,
 			);
 			path = Kidoz;
@@ -440,6 +436,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -454,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -464,9 +462,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz",
+					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz/Release-iphonesimulator",
 				);
 				MARKETING_VERSION = 1.3.6;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.SDK-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -494,8 +494,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz",
+					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz/Release-iphonesimulator",
 				);
 				MARKETING_VERSION = 1.3.6;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.SDK-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,7 +513,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
 				INFOPLIST_FILE = "$(SRCROOT)/KidozSDKSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -520,7 +522,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz",
 				);
-				MARKETING_VERSION = 1.3.5;
+				MARKETING_VERSION = 1.3.6;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.SDK-Sample-App-yvr1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,7 +538,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = V79KVWWJ4G;
 				INFOPLIST_FILE = "$(SRCROOT)/KidozSDKSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -545,7 +547,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KidozSDKSampleApp/Kidoz",
 				);
-				MARKETING_VERSION = 1.3.5;
+				MARKETING_VERSION = 1.3.6;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.SDK-Sample-App-yvr1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
