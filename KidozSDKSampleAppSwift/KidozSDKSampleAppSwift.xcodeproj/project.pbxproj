@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		112072E925C1742A0082E93F /* libKidozSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 112072E825C1742A0082E93F /* libKidozSDK.a */; };
+		11892DB22475383E007185FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11892DB12475383E007185FE /* AppDelegate.swift */; };
+		11892DB42475383E007185FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11892DB32475383E007185FE /* SceneDelegate.swift */; };
+		11892DB62475383E007185FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11892DB52475383E007185FE /* ViewController.swift */; };
+		11892DB92475383E007185FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11892DB72475383E007185FE /* Main.storyboard */; };
+		11892DBC2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11892DBA2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodeld */; };
+		11892DBE24753841007185FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11892DBD24753841007185FE /* Assets.xcassets */; };
+		11892DC124753841007185FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11892DBF24753841007185FE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		112072E825C1742A0082E93F /* libKidozSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKidozSDK.a; sourceTree = "<group>"; };
+		11892DAE2475383E007185FE /* KidozSDKSampleAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidozSDKSampleAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11892DB12475383E007185FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11892DB32475383E007185FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		11892DB52475383E007185FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11892DB82475383E007185FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11892DBB2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KidozSDKSampleAppSwift.xcdatamodel; sourceTree = "<group>"; };
+		11892DBD24753841007185FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11892DC024753841007185FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11892DC224753841007185FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11892DE824754DE9007185FE /* Kidoz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kidoz-Bridging-Header.h"; sourceTree = "<group>"; };
+		11B2C6AE2476993500AC8EF7 /* KidozSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidozSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11892DAB2475383E007185FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112072E925C1742A0082E93F /* libKidozSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		112956FC256579BE009493F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11892DA52475383E007185FE = {
+			isa = PBXGroup;
+			children = (
+				11892DB02475383E007185FE /* KidozSDKSampleAppSwift */,
+				11892DAF2475383E007185FE /* Products */,
+				112956FC256579BE009493F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		11892DAF2475383E007185FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11892DAE2475383E007185FE /* KidozSDKSampleAppSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11892DB02475383E007185FE /* KidozSDKSampleAppSwift */ = {
+			isa = PBXGroup;
+			children = (
+				11892DE824754DE9007185FE /* Kidoz-Bridging-Header.h */,
+				11892DE424753B5A007185FE /* Kidoz */,
+				11892DB12475383E007185FE /* AppDelegate.swift */,
+				11892DB32475383E007185FE /* SceneDelegate.swift */,
+				11892DB52475383E007185FE /* ViewController.swift */,
+				11892DB72475383E007185FE /* Main.storyboard */,
+				11892DBD24753841007185FE /* Assets.xcassets */,
+				11892DBF24753841007185FE /* LaunchScreen.storyboard */,
+				11892DC224753841007185FE /* Info.plist */,
+				11892DBA2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodeld */,
+			);
+			path = KidozSDKSampleAppSwift;
+			sourceTree = "<group>";
+		};
+		11892DE424753B5A007185FE /* Kidoz */ = {
+			isa = PBXGroup;
+			children = (
+				112072E825C1742A0082E93F /* libKidozSDK.a */,
+				11B2C6AE2476993500AC8EF7 /* KidozSDK.h */,
+			);
+			path = Kidoz;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11892DAD2475383E007185FE /* KidozSDKSampleAppSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11892DDB24753841007185FE /* Build configuration list for PBXNativeTarget "KidozSDKSampleAppSwift" */;
+			buildPhases = (
+				11892DAA2475383E007185FE /* Sources */,
+				11892DAB2475383E007185FE /* Frameworks */,
+				11892DAC2475383E007185FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KidozSDKSampleAppSwift;
+			productName = Kidoz_iOS_SDK_Sample_App_Swift;
+			productReference = 11892DAE2475383E007185FE /* KidozSDKSampleAppSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11892DA62475383E007185FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Kidoz;
+				TargetAttributes = {
+					11892DAD2475383E007185FE = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 11892DA92475383E007185FE /* Build configuration list for PBXProject "KidozSDKSampleAppSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11892DA52475383E007185FE;
+			productRefGroup = 11892DAF2475383E007185FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11892DAD2475383E007185FE /* KidozSDKSampleAppSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11892DAC2475383E007185FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11892DC124753841007185FE /* LaunchScreen.storyboard in Resources */,
+				11892DBE24753841007185FE /* Assets.xcassets in Resources */,
+				11892DB92475383E007185FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11892DAA2475383E007185FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11892DBC2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodeld in Sources */,
+				11892DB62475383E007185FE /* ViewController.swift in Sources */,
+				11892DB22475383E007185FE /* AppDelegate.swift in Sources */,
+				11892DB42475383E007185FE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11892DB72475383E007185FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11892DB82475383E007185FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11892DBF24753841007185FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11892DC024753841007185FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11892DD924753841007185FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11892DDA24753841007185FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11892DDC24753841007185FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V79KVWWJ4G;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = KidozSDKSampleAppSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidozSDKSampleAppSwift/Kidoz",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.Kidoz-iOS-SDK-SampleAppSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KidozSDKSampleAppSwift/Kidoz-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		11892DDD24753841007185FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V79KVWWJ4G;
+				INFOPLIST_FILE = KidozSDKSampleAppSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidozSDKSampleAppSwift/Kidoz",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kidoz.Kidoz-iOS-SDK-SampleAppSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KidozSDKSampleAppSwift/Kidoz-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11892DA92475383E007185FE /* Build configuration list for PBXProject "KidozSDKSampleAppSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11892DD924753841007185FE /* Debug */,
+				11892DDA24753841007185FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11892DDB24753841007185FE /* Build configuration list for PBXNativeTarget "KidozSDKSampleAppSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11892DDC24753841007185FE /* Debug */,
+				11892DDD24753841007185FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11892DBA2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11892DBB2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodel */,
+			);
+			currentVersion = 11892DBB2475383E007185FE /* KidozSDKSampleAppSwift.xcdatamodel */;
+			path = KidozSDKSampleAppSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 11892DA62475383E007185FE /* Project object */;
+}

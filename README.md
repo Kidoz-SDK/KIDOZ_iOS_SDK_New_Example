@@ -1,7 +1,3 @@
-
-
-
-
 **KIDOZ iOS SDK version 8.9.0**
 
 # KIDOZ iOS SDK Sample App
@@ -23,6 +19,9 @@ The example application contains the following creative tools:
 2.  Launch  `Xcode`, click  `File`  –>  `Open`, navigate to downloaded project, select the Xcode project file and press  `OK`.
 
 # KIDOZ SDK - Getting Started
+
+ `  Please note - This documentation is intended for Objective C developers, for Swift documentation please use  `  [this link](SWIFT.md).
+ 
 #### Adding the SDK
 
 1.  Navigate to the downloaded KidozSDKSampleApp folder or open KidozSDKSampleApp in the Xcode and find the libKidozSDK.a and the KidozSDK.h files.
